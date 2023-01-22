@@ -1,0 +1,32 @@
+<form action="/action_page.php">
+    <div class="container">
+        <h1>Registar un Nuevo Empleado</h1>
+        <p>Ingresa todo los datos necesarios para crear un usuario</p>
+        <hr>
+
+        <label for="id"><b>Cedula</b></label>
+        <input type="text" placeholder="Ingrese el numero de identificacion" name="id" id="id" required [(ngModel)]="usuario.usuarioID">
+
+        <label for="psw"><b>Contraseña</b></label>
+        <input type="password" placeholder="Ingresa la contraseña" name="psw" id="psw" required [(ngModel)]="usuario.usuarioPassword">
+
+        <label for="id"><b>Nombre</b></label>
+        <input type="text" placeholder="Ingrese el nombre" name="id" id="nombre" required [(ngModel)]="usuario.usuarioNombre">
+        <div>
+            <label for="cars">Empresa</label>
+            <select class="select" [(ngModel)]="usuario.empresaID" name="empresa">
+                <option value="2">KFC</option>
+                <option value="1">Riot Games</option>
+            </select>
+        </div>
+        <div>
+            <label for="cars">Tipo Empleado</label>
+            <select class="select" [(ngModel)]="usuario.usuarioTipo" name="tipoUsuario">
+                <option value="1">Ejecutivo</option>
+                <option value="0">Colaborador</option>
+            </select>
+        </div>
+
+        <button type="submit" class="registerbtn" (click)="registrar()">Registrar</button>
+    </div>
+</form>

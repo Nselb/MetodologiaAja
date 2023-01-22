@@ -1,0 +1,20 @@
+<h1 id="tableLabel">Tabla de Usuarios - Administrador</h1>
+<button type="submit" class="registrarNuevoGeneral" (click)="registrar()">Registrar Nuevo</button>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="usuarios">
+    <thead class="encabezados">
+        <tr>
+            <th>Idetificador</th>
+            <th>Nombre</th>
+            <th>Contraseña</th>
+            <th>Tipo de usuario</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios" class="data">
+            <td>{{ usuario.usuarioID }}</td>
+            <td>{{ usuario.usuarioNombre }}</td>
+            <td>{{ usuario.usuarioPassword }}</td>
+            <td>{{ usuario.usuarioTipo }}</td>
+        </tr>
+    </tbody>
+</table>

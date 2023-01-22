@@ -1,0 +1,22 @@
+<form action="/action_page.php">
+    <div class="container">
+        <h1>Registar Empleado en Riot Games</h1>
+        <p>Ingresa todo los datos necesarios para crear un usuario</p>
+        <hr>
+
+        <label for="userName"><b>Nombre de Usuario</b></label>
+        <input type="text" placeholder="Ingresa el nombre" name="userName" id="userName" required>
+
+        <label for="id"><b>Cedula</b></label>
+        <input type="text" placeholder="Ingrese el numero de identificacion" name="id" id="id" required [(ngModel)]="usuario.usuarioID">
+
+        <label for="psw"><b>Contraseña</b></label>
+        <input type="password" placeholder="Ingresa la contraseña" name="psw" id="psw" required [(ngModel)]="usuario.usuarioPassword">
+
+        <label for="id"><b>Nombre</b></label>
+        <input type="text" placeholder="Ingrese el nombre" name="id" id="id" required [(ngModel)]="usuario.usuarioNombre">
+
+        <button type="submit" class="registerbtn">Registrar</button>
+    </div>
+
+</form>

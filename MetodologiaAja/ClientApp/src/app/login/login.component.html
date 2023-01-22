@@ -1,0 +1,23 @@
+<h3>Metodologia de software - Grupo 1</h3>
+
+<form action="/action_page.php" method="post" class="mainContainer">
+  <div class="imgcontainer">
+    <img src="/images/avatar.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Cédula</b></label>
+    <input type="text" placeholder="Ingrese la cedula" name="uname" required [(ngModel)]="usuario.usuarioID">
+
+    <label for="psw"><b>Contraseña</b></label>
+    <input type="password" placeholder="Ingrese la contraseña" name="psw" required [(ngModel)]="usuario.usuarioPassword">
+    
+    <p *ngIf="error"><em>Datos no encontrados!!</em></p>
+    
+    <button type="submit" (click)="login()">Ingresar</button>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+  </div>
+</form>
