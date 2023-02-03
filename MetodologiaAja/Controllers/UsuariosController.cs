@@ -149,7 +149,8 @@ namespace MetodologiaAja.Controllers
                     int digito = int.Parse(cedula[i].ToString());
                     if (i % 2 == 0)
                     {
-                        impares += digito * 2 > 9 ? digito * 2 - 9 : digito * 2;
+                        int digito2 = digito * 2;
+                        impares += digito2 > 9 ? digito2 - 9 : digito2;
                     }
                     else
                     {
@@ -157,7 +158,12 @@ namespace MetodologiaAja.Controllers
                     }
                 }
                 suma += impares;
-                return suma % 10 == 10 - int.Parse(cedula[9].ToString());
+                int digitoVerificador = suma % 10, ultimaCedula = int.Parse(cedula[9].ToString());
+                if (digitoVerificador == 0)
+                {
+                    return digitoVerificador == ultimaCedula;
+                }
+                return digitoVerificador == 10 - ultimaCedula;
             }
             return false;
         }

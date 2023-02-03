@@ -1,0 +1,26 @@
+<h1 id="tableLabel">Aplicaciones</h1>
+
+<p *ngIf="!aplicaciones"><em>Loading...</em></p>
+<button *ngIf="tipo == 0" (click)="crear()">Crear Aplicacion</button>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="aplicaciones">
+  <thead class="encabezados">
+    <tr>
+      <th>Empresa</th>
+      <th>Numero de Aplicacion</th>
+      <th>Desde</th>
+      <th>Hasta</th>
+      <th>Estado</th>
+      <th *ngIf="tipo == 1">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let aplicacion of aplicaciones" class="data">
+      <td>{{ aplicacion.empresaAsegura }}</td>
+      <td>{{ aplicacion.ordenDeCompra }}</td>
+      <td>{{ aplicacion.desde }}</td>
+      <td>{{ aplicacion.hasta }}</td>
+      <td>{{ aplicacion.estado }}</td>
+      <td *ngIf="tipo == 1 && aplicacion.estado == 'EN ESPERA'"><button>Aprobar</button><button (click)="eliminar(aplicacion.id)">Anular</button></td>
+    </tr>
+  </tbody>
+</table>

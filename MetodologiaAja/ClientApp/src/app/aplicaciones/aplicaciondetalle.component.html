@@ -1,0 +1,81 @@
+<form action="/action_page.php">
+  <div class="container">
+    <h1 class="titulo">APLICACIONES</h1>
+    <p class="subtitulo">Ingrese todos los datos necesarios para crear la aplicacion</p>
+    <hr>
+    <label for="empresaAsegura"><b>1. Asegurado:</b></label>
+    <input type="text" placeholder="Ingrese el Asegurado" name="empresaAsegura" id="empresaAsegura" required [(ngModel)]="aplicacion.empresaAsegura">
+    <div></div>
+    <label for="empresaPaga"><b>2. Pagador:</b></label>
+    <input type="text" placeholder="Ingrese el Pagador" name="empresaPaga" id="empresaPaga" required [(ngModel)]="aplicacion.empresaPaga">
+    <div></div>
+    <label for="desde"><b>3. Desde</b></label>
+    <input type="text" placeholder="Ingrese el origen" name="desde" id="desde" required [(ngModel)]="aplicacion.desde">
+    <div></div>
+    <label for="hasta"><b>4. Hasta</b></label>
+    <input type="text" placeholder="Ingrese el destino" name="hasta" id="hasta" required [(ngModel)]="aplicacion.hasta">
+    <div></div>
+    <label for="tipoTransporte"><b>5. Tipo de Transporte</b></label>
+    <input type="text" placeholder="Ingre el tipo de transporte" name="tipoTransporte" id="tipoTransporte" required [(ngModel)]="aplicacion.tipoTransporte">
+    <div></div>
+    <label for="perteneciente"><b>6. Perteneciente A:</b></label>
+    <input type="text" placeholder="Indique a quien Pertenece" name="perteneciente" id="perteneciente" [(ngModel)]="aplicacion.perteneciente">
+    <div></div>
+    <label for="fechaEmbarque"><b>7. Fecha de Embarque</b></label>
+    <input type="text" placeholder="Indique la fecha de Embarque" name="fechaEmbarque" id="fechaEmbarque" [(ngModel)]="aplicacion.fechaEmbarque">
+    <div></div>
+    <label for="empresaConsignada"><b>8. Consignada A:</b></label>
+    <input type="text" placeholder="Indique a quien se Consigna" name="empresaConsignada" id="empresaConsignada" required [(ngModel)]="aplicacion.empresaConsignada">
+    <div></div>
+    <label for="fechaLlegada"><b>9. Fecha Llegada</b></label>
+    <input type="text" placeholder="Indique la fecha de llegada" name="fechaLlegada" id="fechaLlegada" [(ngModel)]="aplicacion.fechaLlegada">
+    <div></div>
+    <label for="embarcadoPor"><b>10. Embarcado Por:</b></label>
+    <input type="text" placeholder="Indique quien embarca" name="embarcadoPor" id="embarcadoPor" [(ngModel)]="aplicacion.embarcadoPor">
+    <div></div>
+    <label for="notaPedido"><b>11. Nota de Pedido:</b></label>
+    <input type="text" placeholder="Ingrese una nota del pedido" name="notaPedido" id="notaPedido" required [(ngModel)]="aplicacion.notaPedido">
+    <div></div>
+    <label for="ordenDeCompra"><b>12. Numero de Orden:</b></label>
+    <input type="text" placeholder="Indique numero de Orden" name="ordenDeCompra" id="ordenDeCompra" required [(ngModel)]="aplicacion.ordenDeCompra">
+    <div></div>
+    <label for="marca"><b>14. Marca</b></label>
+    <input type="text" placeholder="Ingrese la Marca" name="marca" id="marca" required [(ngModel)]="aplicacion.marca">
+    <div></div>
+    <label for="numero"><b>15. Numero</b></label>
+    <input type="text" placeholder="Ingrese el Identificador o Serial" name="numero" id="numero" required [(ngModel)]="aplicacion.numero">
+    <div></div>
+    <label for="pesoBruto"><b>16. Peso Bruto</b></label>
+    <input type="text" placeholder="Indique el peso bruto" name="pesoBruto" id="pesoBruto" required [(ngModel)]="aplicacion.pesoBruto">
+    <div></div>
+    <label for="bultos"><b>17. Bultos</b></label>
+    <input type="text" placeholder="Especifique Bultos" name="bultos" id="bultos" required [(ngModel)]="aplicacion.bultos">
+    <div></div>
+    <label for="montoTotal"><b>18. Monto Total</b></label>
+    <input type="text" placeholder="Ingrese el Monto Total" name="montoTotal" id="montoTotal" required [(ngModel)]="aplicacion.montoTotal">
+    <div></div>
+    <label for="otrosGastos"><b>19. Porcentaje de otros gastos justificados</b></label>
+    <input type="text" placeholder="Ingrese el Porcentaje" name="otrosGastos" id="otrosGastos" required [(ngModel)]="aplicacion.otrosGastos">
+    <div></div>
+    <label for="sumaAsegurada"><b>20. Suma Asegurada:</b></label>
+    <input type="text" placeholder="Ingrese la suma Asegurada" name="sumaAsegurada" id="sumaAsegurada" required [(ngModel)]="aplicacion.sumaAsegurada">
+    <div></div>
+    <label for="valorPrima"><b>21. Valor Prima:</b></label>
+    <input type="text" placeholder="Ingrese el valor" name="valorPrima" id="valorPrima" required [(ngModel)]="aplicacion.valorPrima">
+    <div></div>
+    <label for="cobertura"><b>22. Cobertura</b></label>
+    <input type="text" placeholder="Indique el nivel de cobertura" name="cobertura" id="cobertura" required [(ngModel)]="aplicacion.cobertura">
+    <div></div>
+    <label for="deducible"><b>23. Deducible</b></label>
+    <input type="text" placeholder="Ingrese el Deducible" name="deducible" id="deducible" required [(ngModel)]="aplicacion.deducible">
+    <div></div>
+    <label for="descripcionContenido"><b>24. Descripcion de Contenido</b></label>
+    <input type="text" placeholder="Describa el contenido del pedido" name="descripcionContenido" id="descripcionContenido" required [(ngModel)]="aplicacion.descripcionContenido">
+    <div></div>
+    <label for="observaciones"><b>25. Observaciones</b></label>
+    <input type="text" placeholder="Describa las Observaciones" name="observaciones" id="observaciones" [(ngModel)]="aplicacion.observaciones">
+
+    <div></div>
+    <button type="submit" class="guardarbtn">Guardar Aplicacion</button>
+  </div>
+</form>

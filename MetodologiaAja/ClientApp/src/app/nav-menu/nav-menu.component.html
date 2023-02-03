@@ -15,10 +15,12 @@
             <a class="nav-link text-dark" [routerLink]="['/login']">Login</a>
           <li *ngIf="logged && tipo == 1" class="nav-item" [routerLinkActive]="['link-active']">
             <a class="nav-link text-dark" [routerLink]="['/trabajadorese']">Trabajadores</a>
+          <li *ngIf="logged && tipo == 1" class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/aplicaciones']">Aplicaciones</a>
           <li *ngIf="logged && tipo == 0 && empresa == 2" class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/trabajadoresk']">Trabajadores</a>
-            <li *ngIf="logged && tipo == 0 && empresa == 1" class="nav-item" [routerLinkActive]="['link-active']">
-              <a class="nav-link text-dark" [routerLink]="['/trabajadoresr']">Trabajadores</a>
+            <a class="nav-link text-dark" [routerLink]="['/aplicaciones']">Aplicaciones</a>
+          <li *ngIf="logged && tipo == 0 && empresa == 1" class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/aplicaciones']">Aplicaciones</a>
           <li *ngIf="logged" class="nav-item" [routerLinkActive]="['link-active']">
             <a class="nav-link text-dark" [routerLink]="['/']" (click)="cerrarSesion()">Cerrar Sesion</a>
         </ul>

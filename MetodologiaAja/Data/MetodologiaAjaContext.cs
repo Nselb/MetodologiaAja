@@ -17,5 +17,7 @@ namespace MetodologiaAja.Data
         public DbSet<Empresa> Empresas { get; set; } = default!;
 
         public DbSet<Usuario> Usuarios { get; set; }
+
+        public DbSet<Aplicacion> Aplicaciones { get; set; }
     }
 }
